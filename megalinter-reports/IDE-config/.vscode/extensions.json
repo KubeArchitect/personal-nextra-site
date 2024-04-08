@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "standard.vscode-standard",
+        "stylelint.vscode-stylelint",
+        "AquaSecurityOfficial.trivy-vulnerability-scanner"
+    ]
+}
