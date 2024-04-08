@@ -23,8 +23,8 @@ dependencies:
 
 devDependencies:
   "@types/node":
-    specifier: 18.11.10
-    version: 18.11.10
+    specifier: 18.19.30
+    version: 18.19.30
   typescript:
     specifier: 4.9.3
     version: 4.9.3
@@ -458,11 +458,13 @@ packages:
       }
     dev: false
 
-  /@types/node@18.11.10:
+  /@types/node@18.19.30:
     resolution:
       {
-        integrity: sha512-juG3RWMBOqcOuXC643OAdSA525V44cVgGV6dUDuiFtss+8Fk5x1hI93Rsld43VeJVIeqlP9I7Fn9/qaVqoEAuQ==,
+        integrity: sha512-453z1zPuJLVDbyahaa1sSD5C2sht6ZpHp5rgJNs+H8YGqhluCXcuOUmBYsAo0Tos0cHySJ3lVUGbGgLlqIkpyg==,
       }
+    dependencies:
+      undici-types: 5.26.5
     dev: true
 
   /@types/prop-types@15.7.5:
@@ -2741,6 +2743,13 @@ packages:
       }
     engines: { node: ">=4.2.0" }
     hasBin: true
+    dev: true
+
+  /undici-types@5.26.5:
+    resolution:
+      {
+        integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==,
+      }
     dev: true
 
   /unified@10.1.2:
