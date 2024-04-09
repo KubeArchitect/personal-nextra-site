@@ -16,7 +16,7 @@
     "react-dom": "18.2.0",
     "@types/node": "20.12.6",
     "typescript": "5.4.4",
-    "nextjs-bundle-analysis: "0.5.0"
+    "nextjs-bundle-analysis": "0.5.0"
   },
   "nextBundleAnalysis": {
     "budget": 358400,
