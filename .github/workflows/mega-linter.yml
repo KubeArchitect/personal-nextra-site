@@ -48,7 +48,6 @@ jobs:
       security-events: write
 
     steps:
-
       # Git Checkout
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -136,7 +135,7 @@ jobs:
             env.APPLY_FIXES_MODE == 'commit' &&
             (!contains(fromJSON('["refs/heads/main", "refs/heads/master"]'), github.ref))
           }}" >> "${GITHUB_ENV}"
-          
+
       - name: Upload MegaLinter scan results to GitHub Security tab
         if: success() || failure()
         uses: github/codeql-action/upload-sarif@4355270be187e1b672a7a1c7c7bae5afdc1ab94a # v3
