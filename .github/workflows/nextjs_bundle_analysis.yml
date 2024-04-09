@@ -1,7 +1,7 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-name: 'Next.js Bundle Analysis'
+name: "Next.js Bundle Analysis"
 
 on:
   pull_request:
@@ -24,7 +24,7 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
       - name: Install Node.js
         uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
@@ -103,9 +103,9 @@ jobs:
         # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
         # run: { echo "body"; cat ".next/analyze/__bundle_analysis_comment.txt"; } >> $GITHUB_OUTPUT
         run: |
-            echo "body<<EOF" >> $GITHUB_OUTPUT
-            echo "$(cat .next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
-            echo EOF >> $GITHUB_OUTPUT
+          echo "body<<EOF" >> $GITHUB_OUTPUT
+          echo "$(cat .next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
+          echo EOF >> $GITHUB_OUTPUT
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
@@ -113,7 +113,7 @@ jobs:
         id: fc
         with:
           issue-number: ${{ github.event.number }}
-          body-includes: '<!-- __NEXTJS_BUNDLE -->'
+          body-includes: "<!-- __NEXTJS_BUNDLE -->"
 
       - name: Create Comment
         uses: peter-evans/create-or-update-comment@v2
