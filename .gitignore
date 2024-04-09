@@ -20,4 +20,4 @@ pnpm-debug.log*
 
 megalinter-reports/
 
-bun.lockb
+pnpm-lock.yaml
