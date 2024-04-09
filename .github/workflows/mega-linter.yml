@@ -147,7 +147,7 @@ jobs:
       - name: Create Pull Request with applied fixes
         uses: peter-evans/create-pull-request@v6
         id: cpr
-        if: env.APPLY_FIXES_IF_PR == 'true'
+        if: env.APPLY_FIXES_IF_PR == 'true' && contains(fromJSON('["refs/heads/main", "refs/heads/master"]'), github.ref)
         with:
           token: ${{ secrets.KUBEARCHITECTBOT_TOKEN || secrets.GITHUB_TOKEN }}
           commit-message: "[MegaLinter] Apply linters automatic fixes"
@@ -155,7 +155,7 @@ jobs:
           labels: bot
 
       - name: Create PR output
-        if: env.APPLY_FIXES_IF_PR == 'true'
+        if: env.APPLY_FIXES_IF_PR == 'true' && contains(fromJSON('["refs/heads/main", "refs/heads/master"]'), github.ref)
         run: |
           echo "PR Number - ${{ steps.cpr.outputs.pull-request-number }}"
           echo "PR URL - ${{ steps.cpr.outputs.pull-request-url }}"
