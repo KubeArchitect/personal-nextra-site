@@ -5,15 +5,15 @@
   "packageManager": "pnpm@8.15.1",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf .next && next build",
     "start": "next start"
   },
   "dependencies": {
-    "next": "v14.2.0-canary.63",
-    "nextra": "3.0.0-alpha.22",
-    "nextra-theme-docs": "3.0.0-alpha.22",
+    "next": "13.5.6",
+    "nextra": "2.13.4",
+    "nextra-theme-docs": "2.13.4",
     "react": "18.2.0",
-    "react-dom": "118.2.0",
+    "react-dom": "18.2.0",
     "@types/node": "20.12.6",
     "typescript": "5.4.4"
   }
