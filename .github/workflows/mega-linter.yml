@@ -91,6 +91,8 @@ jobs:
             }}
 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SARIF_REPORTER: true
+          GITHUB_STATUS_REPORTER: true
 
           # ADD YOUR CUSTOM ENV VARIABLES HERE OR DEFINE THEM IN A FILE
           # .mega-linter.yml AT THE ROOT OF YOUR REPOSITORY
