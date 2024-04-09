@@ -16,5 +16,11 @@
     "react-dom": "18.2.0",
     "@types/node": "20.12.6",
     "typescript": "5.4.4"
+  },
+  "nextBundleAnalysis": {
+    "budget": 358400,
+    "budgetPercentIncreaseRed": 20,
+    "minimumChangeThreshold": 0,
+    "showDetails": true
   }
 }
