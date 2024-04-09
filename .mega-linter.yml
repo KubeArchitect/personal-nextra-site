@@ -32,6 +32,8 @@ DISABLE_LINTERS:
 REPOSITORY_TRIVY_DISABLE_ERRORS: true
 SHOW_ELAPSED_TIME: true
 
+FILTER_REGEX_EXCLUDE: (pnpm-lock.yaml)
+
 FILEIO_REPORTER: false
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass
 # DISABLE_ERRORS: true
